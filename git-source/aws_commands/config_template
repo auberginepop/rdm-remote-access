@@ -1,0 +1,18 @@
+# a copy of this file must created in the same directory but called
+# config but with the relevant aws keys.
+# the config file itself is not stored in git because of the aws keys
+
+export AWS_DEFAULT_REGION=eu-west-1
+export AWS_DEFAULT_OUTPUT=json
+export AWS_ACCESS_KEY_ID="####################"
+export AWS_SECRET_ACCESS_KEY="########################################"
+
+# If this security group below is changed the new ID must also be ammended in the IAM policy
+export SECURITY_ID="sg-0440213a9aee6bb6d"
+export PORT=3306
+export PROTOCOL="tcp"
+export RETENTION_PERIOD=3 # days to keep the IP address in the sucurity rule
+export LOG="/var/log/rdm-remote-access.log"
+
+export http_proxy=http://proxy.cg.ott.edm.local:80/
+export https_proxy=http://proxy.cg.ott.edm.local:80/

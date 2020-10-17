@@ -1,0 +1,4 @@
+*.swp
+config
+aws_commands/config
+aws_commands/conf.d

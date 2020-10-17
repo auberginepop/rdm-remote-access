@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  rdm-remote-access:
+    container_name: rdm-remote-access
+    build: .
+    ports:
+      - "10080:80/tcp"
+    environment:
+      AWS_STUFF_HERE: 'foo'
+    # Volumes store your data between container upgrades
+    volumes:
+      - 'log:/var/log/rdm'
+    restart: unless-stopped
+volumes:
+  log:
